@@ -11,5 +11,11 @@ module.exports = {
     port: process.env.PORT,
     api: {
         prefix: '/api/v1'
+    },
+    log: {
+        level: process.env.LOG_LEVEL
+    },
+    swagger: {
+        path: '/documentation'
     }
 }
