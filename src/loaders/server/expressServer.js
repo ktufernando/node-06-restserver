@@ -48,6 +48,10 @@ class ExpressServer {
     _errorHandler() {
         this.app.use((err, req, res, next) => {
             const code = err.code || 500;
+
+            logger.error(`${code} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+            logger.error(err.stack);
+
             const body = {
                 error: {
                     code,

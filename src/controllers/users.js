@@ -6,6 +6,8 @@ const express = require('express');
  * @param {express.Response} res 
  */
 const getAllUsers = (req, res) => {
+
+    throw new Error("Error de testeo de handler");
     const users = [
         {
             id: 1,
